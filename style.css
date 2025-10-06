@@ -236,6 +236,139 @@ footer {
   border-top: 1px solid #333;
 }
 
+/* Practice Blocks for HTML Tags */
+.practice-block {
+  background: rgba(0, 255, 255, 0.05);
+  border: 2px solid #0ff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.practice-block:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.2);
+}
+
+.practice-block h4 {
+  color: #0ff;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.practice-editor {
+  width: 100%;
+  height: 200px;
+  background: #111;
+  border: 1px solid #0ff;
+  border-radius: 8px;
+  color: #0f0;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  padding: 15px;
+  resize: vertical;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.practice-editor:focus {
+  border-color: #0ff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+/* Tasks Container */
+.tasks-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.task-item {
+  background: rgba(255, 0, 255, 0.1);
+  border: 1px solid #f0f;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all 0.3s;
+}
+
+.task-item:hover {
+  background: rgba(255, 0, 255, 0.2);
+  transform: scale(1.02);
+}
+
+.task-item h5 {
+  color: #f0f;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.task-item p {
+  color: #ccc;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.task-btn {
+  background: transparent;
+  border: 2px solid #f0f;
+  color: #f0f;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.task-btn:hover {
+  background: #f0f;
+  color: #000;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+.task-result {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.task-result.success {
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid #0f0;
+  color: #0f0;
+  display: block;
+}
+
+.task-result.error {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid #f00;
+  color: #f00;
+  display: block;
+}
+
+.task-result.info {
+  background: rgba(255, 255, 0, 0.1);
+  border: 1px solid #ff0;
+  color: #ff0;
+  display: block;
+}
+
+.info-text {
+  color: #0ff;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
 /* Editor Styles */
 .editor-container {
   background: #111;
@@ -409,6 +542,30 @@ footer {
   
   .notes-section {
     padding: 1.5rem;
+  }
+  
+  /* Mobile styles for practice blocks */
+  .tasks-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .practice-block {
+    padding: 1rem;
+  }
+  
+  .practice-editor {
+    height: 150px;
+    font-size: 12px;
+    padding: 10px;
+  }
+  
+  .task-item {
+    padding: 0.8rem;
+  }
+  
+  .task-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
   }
 }
 
