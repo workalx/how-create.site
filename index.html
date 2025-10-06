@@ -17,7 +17,7 @@
       <!-- Navigation -->
       <div class="slide-navigation">
         <button id="prev-btn" class="nav-btn" disabled>← Назад</button>
-        <span id="slide-counter" class="slide-counter">1 / 5</span>
+        <span id="slide-counter" class="slide-counter">1 / 7</span>
         <button id="next-btn" class="nav-btn">Далі →</button>
       </div>
 
@@ -124,11 +124,274 @@
         </div>
       </div>
 
-      <!-- Slide 5: JavaScript & Practice -->
+      <!-- Slide 5: HTML Tags -->
       <div class="slide" data-slide="5">
         <div class="slide-content">
           <div class="theory-section">
-            <h2>Крок 4: JavaScript</h2>
+            <h2>Крок 4: Базові HTML теги</h2>
+            <p>HTML теги - це елементи, які створюють структуру сторінки. Ось найважливіші:</p>
+            
+            <div class="explanation">
+              <h3>📝 Текстові теги:</h3>
+              <ul>
+                <li><code>&lt;h1&gt;</code> до <code>&lt;h6&gt;</code> - заголовки (h1 найбільший)</li>
+                <li><code>&lt;p&gt;</code> - параграф тексту</li>
+                <li><code>&lt;strong&gt;</code> - <strong>жирний текст</strong></li>
+                <li><code>&lt;em&gt;</code> - <em>курсивний текст</em></li>
+                <li><code>&lt;br&gt;</code> - перенос рядка</li>
+              </ul>
+            </div>
+
+            <div class="explanation">
+              <h3>🔗 Посилання та зображення:</h3>
+              <ul>
+                <li><code>&lt;a href="адреса"&gt;</code> - посилання</li>
+                <li><code>&lt;img src="шлях" alt="опис"&gt;</code> - зображення</li>
+              </ul>
+            </div>
+
+            <div class="explanation">
+              <h3>📋 Списки:</h3>
+              <ul>
+                <li><code>&lt;ul&gt;</code> - ненумерований список</li>
+                <li><code>&lt;ol&gt;</code> - нумерований список</li>
+                <li><code>&lt;li&gt;</code> - елемент списку</li>
+              </ul>
+            </div>
+
+            <div class="explanation">
+              <h3>📦 Блоки та контейнери:</h3>
+              <ul>
+                <li><code>&lt;div&gt;</code> - універсальний блок для групування елементів</li>
+                <li><code>&lt;section&gt;</code> - секція сторінки</li>
+                <li><code>&lt;article&gt;</code> - стаття або незалежний контент</li>
+                <li><code>&lt;header&gt;</code> - шапка сторінки</li>
+                <li><code>&lt;footer&gt;</code> - підвал сторінки</li>
+                <li><code>&lt;nav&gt;</code> - навігаційне меню</li>
+              </ul>
+            </div>
+
+            <div class="tip-box">
+              <strong>💡 Приклад використання:</strong><br>
+              <code>&lt;h1&gt;Мій сайт&lt;/h1&gt;</code><br>
+              <code>&lt;p&gt;Це <strong>важливий</strong> текст&lt;/p&gt;</code><br>
+              <code>&lt;a href="https://google.com"&gt;Посилання на Google&lt;/a&gt;</code>
+            </div>
+
+            <!-- Practice Section for HTML Tags -->
+            <div class="practice-section">
+              <h3>🚀 Практикуй HTML теги!</h3>
+              
+              <!-- Block 1: HTML Editor -->
+              <div class="practice-block">
+                <h4>📝 Редактор HTML</h4>
+                <div class="editor-container">
+                  <textarea id="html-tags-editor" class="practice-editor" placeholder="Напиши HTML код тут...">&lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Мій сайт&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Привіт, світ!&lt;/h1&gt;
+  &lt;p&gt;Це мій перший сайт!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                </div>
+              </div>
+
+              <!-- Block 2: Result Preview -->
+              <div class="practice-block">
+                <h4>👀 Результат</h4>
+                <div class="preview-container">
+                  <iframe id="html-tags-preview" class="preview-frame"></iframe>
+                </div>
+              </div>
+
+              <!-- Block 3: Practice Tasks -->
+              <div class="practice-block">
+                <h4>📋 Завдання для практики</h4>
+                <div class="tasks-container">
+                  <div class="task-item">
+                    <h5>Завдання 1: Заголовки</h5>
+                    <p>Створи заголовки різних рівнів (h1, h2, h3)</p>
+                    <button class="task-btn" onclick="checkTask1()">✅ Перевірити</button>
+                    <div id="task1-result" class="task-result"></div>
+                  </div>
+                  
+                  <div class="task-item">
+                    <h5>Завдання 2: Списки</h5>
+                    <p>Створи нумерований та ненумерований списки</p>
+                    <button class="task-btn" onclick="checkTask2()">✅ Перевірити</button>
+                    <div id="task2-result" class="task-result"></div>
+                  </div>
+                  
+                  
+                  <div class="task-item">
+                    <h5>Завдання 3: Посилання</h5>
+                    <p>Додай посилання на зовнішній сайт</p>
+                    <button class="task-btn" onclick="checkTask3()">✅ Перевірити</button>
+                    <div id="task3-result" class="task-result"></div>
+                  </div>
+                  
+                  <div class="task-item">
+                    <h5>Завдання 4: Форматування</h5>
+                    <p>Використай жирний та курсивний текст</p>
+                    <button class="task-btn" onclick="checkTask4()">✅ Перевірити</button>
+                    <div id="task4-result" class="task-result"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="notes-section">
+            <h3>📝 Твої нотатки</h3>
+            <textarea id="shared-notes" class="notes-area" placeholder="Записуй свої думки, ідеї та важливі моменти тут... Нотатки зберігаються автоматично!"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 6: CSS Styling -->
+      <div class="slide" data-slide="6">
+        <div class="slide-content">
+          <div class="theory-section">
+            <h2>Крок 5: Базові CSS стилі</h2>
+            <p>CSS дозволяє змінювати зовнішній вигляд HTML елементів. Ось основні властивості:</p>
+            
+            <div class="explanation">
+              <h3>🎨 Кольори та фон:</h3>
+              <ul>
+                <li><code>color</code> - колір тексту</li>
+                <li><code>background-color</code> - колір фону</li>
+                <li><code>background-image</code> - зображення фону</li>
+              </ul>
+            </div>
+
+            <div class="explanation">
+              <h3>📏 Розміри та відступи:</h3>
+              <ul>
+                <li><code>width</code> - ширина елемента</li>
+                <li><code>height</code> - висота елемента</li>
+                <li><code>margin</code> - зовнішні відступи</li>
+                <li><code>padding</code> - внутрішні відступи</li>
+              </ul>
+            </div>
+
+            <div class="explanation">
+              <h3>🔤 Шрифти та текст:</h3>
+              <ul>
+                <li><code>font-family</code> - тип шрифту</li>
+                <li><code>font-size</code> - розмір шрифту</li>
+                <li><code>text-align</code> - вирівнювання тексту</li>
+                <li><code>font-weight</code> - товщина шрифту</li>
+              </ul>
+            </div>
+
+            <div class="explanation">
+              <h3>🖼️ Границы та тіні:</h3>
+              <ul>
+                <li><code>border</code> - границя елемента</li>
+                <li><code>border-radius</code> - заокруглені кути</li>
+                <li><code>box-shadow</code> - тінь елемента</li>
+              </ul>
+            </div>
+
+            <div class="tip-box">
+              <strong>💡 Приклад CSS:</strong><br>
+              <code>h1 { color: blue; font-size: 24px; }</code><br>
+              <code>div { background: red; padding: 20px; }</code><br>
+              <code>p { text-align: center; margin: 10px; }</code>
+            </div>
+
+            <!-- Practice Section for CSS -->
+            <div class="practice-section">
+              <h3>🚀 Практикуй CSS стилі!</h3>
+              
+              <!-- Block 1: HTML Editor (read-only) -->
+              <div class="practice-block">
+                <h4>📄 Твоя HTML сторінка</h4>
+                <div class="editor-container">
+                  <textarea id="html-tags-editor-css" class="practice-editor" placeholder="Тут буде твоя HTML сторінка з попереднього завдання..." readonly></textarea>
+                </div>
+                <p class="info-text">💡 Це твоя HTML сторінка з попереднього завдання. Тепер ти можеш її стилізувати!</p>
+              </div>
+              
+              <!-- Block 2: CSS Editor -->
+              <div class="practice-block">
+                <h4>📝 Редактор CSS</h4>
+                <div class="editor-container">
+                  <textarea id="css-styles-editor" class="practice-editor" placeholder="Напиши CSS код тут...">body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: blue;
+  text-align: center;
+}
+
+p {
+  color: #333;
+  margin: 10px;
+}</textarea>
+                </div>
+              </div>
+
+              <!-- Block 3: Result Preview -->
+              <div class="practice-block">
+                <h4>👀 Результат</h4>
+                <div class="preview-container">
+                  <iframe id="css-styles-preview" class="preview-frame"></iframe>
+                </div>
+              </div>
+
+              <!-- Block 4: Practice Tasks -->
+              <div class="practice-block">
+                <h4>📋 Завдання для практики</h4>
+                <div class="tasks-container">
+                  <div class="task-item">
+                    <h5>Завдання 1: Кольори</h5>
+                    <p>Зміни колір тексту та фону елементів</p>
+                    <button class="task-btn" onclick="checkCSSTask1()">✅ Перевірити</button>
+                    <div id="css-task1-result" class="task-result"></div>
+                  </div>
+                  
+                  <div class="task-item">
+                    <h5>Завдання 2: Розміри</h5>
+                    <p>Встанови ширину, висоту та відступи</p>
+                    <button class="task-btn" onclick="checkCSSTask2()">✅ Перевірити</button>
+                    <div id="css-task2-result" class="task-result"></div>
+                  </div>
+                  
+                  <div class="task-item">
+                    <h5>Завдання 3: Шрифти</h5>
+                    <p>Зміни тип, розмір та вирівнювання шрифту</p>
+                    <button class="task-btn" onclick="checkCSSTask3()">✅ Перевірити</button>
+                    <div id="css-task3-result" class="task-result"></div>
+                  </div>
+                  
+                  <div class="task-item">
+                    <h5>Завдання 4: Границы</h5>
+                    <p>Додай границі, заокруглення та тіні</p>
+                    <button class="task-btn" onclick="checkCSSTask4()">✅ Перевірити</button>
+                    <div id="css-task4-result" class="task-result"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="notes-section">
+            <h3>📝 Твої нотатки</h3>
+            <textarea id="shared-notes" class="notes-area" placeholder="Записуй свої думки, ідеї та важливі моменти тут... Нотатки зберігаються автоматично!"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 7: JavaScript & Practice -->
+      <div class="slide" data-slide="7">
+        <div class="slide-content">
+          <div class="theory-section">
+            <h2>Крок 6: JavaScript</h2>
             <p>У <b>script.js</b> напиши просту взаємодію.</p>
             <pre><code>document.body.addEventListener("click", () =&gt; {
   alert("Ти натиснув на сайт!");
